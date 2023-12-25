@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Collections;
 public class BasicSorting{
     // Bubble Sort
     public static void bubbleSort(int arr[]){
@@ -52,10 +54,32 @@ public class BasicSorting{
             arr[prev+1] = curr;
         }
     }
+    // Counting Sort
+    public static void countingSort(int arr[]){
+        // Find max element for range of count Array
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            max = Math.max(max,arr[i]);
+        }
+        // Count Array
+        int count[] = new int[max+1];
+        for(int i=0;i<arr.length;i++){
+            count[arr[i]]++;
+        }
+        // Sorting
+        int j=0;
+        for(int i=0;i<count.length;i++){
+            while(count[i]>0){
+                arr[j] = i;
+                j++;
+                count[i]--;
+            }
+        }
+    }
     // Main Function
     public static void main(String args[]){
-        int arr[] = {5,4,1,3,2};
-        insertionSort(arr);
+        int arr[] = {1,4,1,3,2,4,3,7};
+        countingSort(arr);
         printArray(arr);
     }
 }
