@@ -27,8 +27,18 @@ public class Strings{
         int x2 = x*x, y2 = y*y;
         return (float)Math.sqrt(x2+y2);
     }
+    // Largest String (Lexicographic comparison)
+    public static void printLargestString(String str[]){
+        String largest = str[0];
+        for(int i=1;i<str.length;i++){
+            if(largest.compareTo(str[i])<0){
+                largest = str[i];
+            }
+        }
+        System.out.println(largest);
+    }
     public static void main(String args[]){
-        String str = "WNEENESENNN";
-        System.out.println(getShortestPath(str));
+        String str[] = {"apple", "Mango", "guava"};
+        printLargestString(str);
     }
 }
