@@ -64,7 +64,22 @@ public class Strings{
         }
         System.out.println(count);
     }
+    // Two strings are anagram or not
+    public static boolean isAnagarm(String a, String b){
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        char ch1[] = a.toCharArray();
+        char ch2[] = b.toCharArray();
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+        if(Arrays.equals(ch1,ch2)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public static void main(String args[]){
-        
+        String a = "Race", b = "Care";
+        System.out.println(isAnagarm(a, b));
     }
 }
