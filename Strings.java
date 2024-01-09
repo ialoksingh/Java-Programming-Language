@@ -1,3 +1,4 @@
+import java.util.*;
 public class Strings{
     // To check if a string is palindrome
     public static boolean isPalindrome(String str){
@@ -52,8 +53,18 @@ public class Strings{
         }
         System.out.println(sb);
     }
+    // Count lowercase vowels in a string
+    public static void noOfLowerCaseVowels(String str){
+        int count = 0;
+        for(int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'||ch=='u'){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
     public static void main(String args[]){
-        String str = "hello, i am alok.";
-        toUpperCase(str);
+        
     }
 }
