@@ -78,8 +78,32 @@ public class Strings{
             return false;
         }
     }
+    // String compression
+    public static void compressString(String s){
+        StringBuilder sb = new StringBuilder();
+        char ch = s.charAt(0);
+        int count = 1;
+        int i;
+        for(i=1;i<s.length();i++){
+            if(s.charAt(i)==ch){
+                count++;
+            }else{
+                ch = s.charAt(i);
+                sb.append(s.charAt(i-1));
+                if(count>1){
+                    sb.append(Integer.toString(count));
+                }
+                count = 1;
+            }
+        }
+        sb.append(s.charAt(i-1));
+            if(count>1){
+            sb.append(Integer.toString(count));
+        }
+        System.out.println(sb.toString());
+    }
     public static void main(String args[]){
-        String a = "Race", b = "Care";
-        System.out.println(isAnagarm(a, b));
+        String str = "abcd";
+        compressString(str);
     }
 }
