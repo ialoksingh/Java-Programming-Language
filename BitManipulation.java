@@ -42,8 +42,13 @@ public class BitManipulation {
         int bitMask = newBit<<i;
         return n|bitMask;
     }
+    // Clear last i bits
+    public static int clearLastIBits(int n,int i){
+        int bitMask = (~0)<<i;
+        return n&bitMask;
+    }
     // Main Function
     public static void main(String[] args) {
-        
+        System.out.println(clearLastIBits(53, 4));
     }
 }
