@@ -1,3 +1,4 @@
+import Alok.*;
 public class OOPS{
     public static void main(String args[]){
         // Pen p1 = new Pen();
@@ -34,13 +35,50 @@ public class OOPS{
 
         // Fish shark = new Fish();
         // shark.eat();
-        Dog shiro = new Dog();
-        shiro.eat();
-        shiro.legs = 4;
-        System.out.println(shiro.legs);
-        shiro.bark();
+        // Dog shiro = new Dog();
+        // shiro.eat();
+        // shiro.legs = 4;
+        // System.out.println(shiro.legs);
+        // shiro.bark();
+        
+        // Calculator calc = new Calculator();
+        // System.out.println(calc.sum(1,2));
+        // System.out.println(calc.sum(1,2,3));
+        // System.out.println(calc.sum(1.5f,2.5f));
+
+        // Child c = new Child();
+        // c.does();
+        
+        School s = new School();
+        s.schoolName();
     }
 }
+// Polymorphism
+// Method Overriding
+class Parent{
+    void does(){
+        System.out.println("Work");
+    }
+}
+class Child extends Parent{
+    @Override
+    void does(){
+        System.out.println("Nothing");
+    }
+}
+// Method Overloading
+class Calculator{
+    int sum(int a,int b){
+        return a+b;
+    }
+    int sum(int a, int b, int c){
+        return a+b+c;
+    }
+    float sum(float a,float b){
+        return a+b;
+    }
+}
+
 // Inheritence
 // Base class / Parent class / Super class
 class Animal{
