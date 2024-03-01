@@ -14,11 +14,54 @@ public class OOPS {
         // q.moves();
 
         // Multiple Inheritence in Java using Interfaces
-        Crow cr = new Crow();
-        cr.drink();
-        cr.eat();
+        // Crow cr = new Crow();
+        // cr.drink();
+        // cr.eat();
+
+        // Static keyword in Java
+        // GoogleEmployee g1 = new GoogleEmployee();
+        // g1.setName("Alok");
+        // g1.salary = 5000000;
+        // g1.companyName = "Google";
+
+        // g1.getName();
+        // System.out.println(g1.salary);
+        // System.out.println(g1.companyName);
+
+        // GoogleEmployee g2 = new GoogleEmployee();
+        // System.out.println(g2.companyName);
+
+        // Super Keyword in Java
+        Deer d = new Deer();
+        System.out.println(d.animalColor);
     }
 }
+// Super Keyword in Java
+class Zoo{
+    String animalColor;
+    Zoo(){
+        System.out.println("Zoo constructor is called...");
+    }
+}
+class Deer extends Zoo{
+    Deer(){
+        super.animalColor = "brown";
+        System.out.println("Deer constructor is called...");
+    }
+}
+// Static keyword in Java
+class GoogleEmployee{
+    String name;
+    int salary;
+    static String companyName;
+    void setName(String name){
+        this.name = name;
+    }
+    void getName(){
+        System.out.println(this.name);
+    }
+}
+
 // Multiple Inheritence in Java using Interfaces
 interface Herbivore{
     void drink();
